@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Formulario</title>
-    <link rel="stylesheet" type="text/css" href="estilos.css">
-  </head>
-  <body>
-    <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre"><br>
-      
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" name="apellido"><br>
-      
-      <label for="edad">Edad:</label>
-      <input type="number" id="edad" name="edad"><br>
-      
-      <label for="correo">Correo electrónico:</label>
-      <input type="email" id="correo" name="correo"><br>
-      
-      <label for="telefono">Teléfono:</label>
-      <input type="tel" id="telefono" name="telefono"><br>
-      
-      <label for="direccion">Dirección:</label>
-      <input type="text" id="direccion" name="direccion"><br>
-      
-      <label for="ciudad">Ciudad:</label>
-      <input type="text" id="ciudad" name="ciudad"><br>
-      
-      <label for="estado">Estado:</label>
-      <select id="estado" name="estado">
-        <option value="alabama">Alabama</option>
-        <option value="alaska">Alaska</option>
-        <option value="arizona">Arizona</option>
-        <option value="arkansas">Arkansas</option>
-        <option value="california">California</option>
-      </select><br>
-      
-      <label for="comentarios">Comentarios:</label>
-      <textarea id="comentarios" name="comentarios"></textarea><br>
-      
-      <label for="sexo">Sexo:</label>
-      <input type="radio" id="sexo" name="sexo" value="masculino">Masculino
-      <input type="radio" id="sexo" name="sexo" value="femenino">Femenino<br>
-      
-      <label for="acepto">Acepto los términos y condiciones:</label>
-      <input type="checkbox" id="acepto" name="acepto"><br>
-      
-      <input type="reset" value="Borrar">
-      <input type="submit" value="Enviar">
-    </form>
-  </body>
+<head>
+  <title>Formulario de Curriculum</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>Formulario de Curriculum</h1>
+  <form>
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" name="nombre" required>
+    
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" name="telefono" required>
+    
+    <label for="direccion">Dirección</label>
+    <input type="text" id="direccion" name="direccion">
+    
+    <label for="fecha_nacimiento">Fecha de nacimiento</label>
+    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+    
+    <label for="genero">Género</label>
+    <input type="radio" id="masculino" name="genero" value="Masculino">
+    <label for="masculino">Masculino</label>
+    <input type="radio" id="femenino" name="genero" value="Femenino">
+    <label for="femenino">Femenino</label>
+    
+    <label for="educacion">Educación</label>
+    <select id="educacion" name="educacion" required>
+      <option value="">Seleccione una opción</option>
+      <option value="Bachillerato">Bachillerato</option>
+      <option value="Técnico">Técnico</option>
+      <option value="Universitario">Universitario</option>
+      <option value="Posgrado">Posgrado</option>
+    </select>
+    
+    <label for="experiencia">Experiencia laboral</label>
+    <textarea id="experiencia" name="experiencia"></textarea>
+    
+    <label for="habilidades">Habilidades</label>
+    <input type="checkbox" id="habilidad1" name="habilidades[]" value="Comunicación">
+    <label for="habilidad1">Comunicación</label>
+    <input type="checkbox" id="habilidad2" name="habilidades[]" value="Liderazgo">
+    <label for="habilidad2">Liderazgo</label>
+    <input type="checkbox" id="habilidad3" name="habilidades[]" value="Trabajo en equipo">
+    <label for="habilidad3">Trabajo en equipo</label>
+    
+    <button type="reset">Limpiar</button>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
 </html>
